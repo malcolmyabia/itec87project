@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kain Po!</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #ff6347;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #ff6347;
+            color: #fff;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #ff6347;
+            font-size: 1.5em;
+            border-bottom: 2px solid #ff6347;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .menu-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+        .menu-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .menu-item input {
+            width: 50px;
+            padding: 5px;
+            margin-left: auto;
+        }
+        button {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            padding: 15px;
+            font-size: 1em;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #green;
+        }
+        footer {
+            background-color: #ff6347;
+            color: #fff;
+            text-align: center;
+            padding: 0px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+		.button-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 15px 50px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 13px;
+            font-size: 1.2em;
+            font-weight: 70;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kain Po!</h1>
+    </header>
+    <nav>
+        <a href="#Maindish">Maindish</a>
+        <a href="#Dessert">Dessert</a>
+        <a href="#Vegetables">Vegetables</a>
+        <a href="#AddOns">Add Ons</a>
+    </nav>
+    <section id="Maindish">
+        <h2>Main Dishes</h2>
+        <div class="menu-item">
+            <img src="Grilled-Salmon.jpg" alt="Grilled Salmon">
+            <div>
+                <h3>Grilled Salmon</h3>
+                <p>Fresh salmon fillet grilled to perfection, served with a lemon butter sauce.</p>
+                <p>Price: $18.00</p>
+            </div>
+            <input type="number" id="Grilled-Salmon-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="1p.jpg" alt="Steak and Fries">
+            <div>
+                <h3>Steak and Fries</h3>
+                <p>Juicy steak cooked to your liking, accompanied by crispy fries.</p>
+                <p>Price: $22.00</p>
+            </div>
+            <input type="number" id="Steak-and-Fries-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="2p.jpg" alt="Chicken Alfredo">
+            <div>
+                <h3>Chicken Alfredo</h3>
+                <p>Grilled chicken breast served over fettuccine pasta with creamy Alfredo sauce.</p>
+                <p>Price: $16.00</p>
+            </div>
+            <input type="number" id="Chicken-Alfredo-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="3p.jpg" alt="Vegetarian Pizza">
+            <div>
+                <h3>Vegetarian Pizza</h3>
+                <p>Stone-baked pizza topped with fresh vegetables and mozzarella cheese.</p>
+                <p>Price: $14.00</p>
+            </div>
+            <input type="number" id="Vegetarian-Pizza-qty" min="0" value="0">
+        </div>
+    </section>
+    <section id="Dessert">
+        <h2>Desserts</h2>
+        <div class="menu-item">
+            <img src="1a.jpg" alt="Chocolate Lava Cake">
+            <div>
+                <h3>Chocolate Lava Cake</h3>
+                <p>Rich and gooey chocolate cake with a molten center, served with vanilla ice cream.</p>
+                <p>Price: $8.00</p>
+            </div>
+            <input type="number" id="Chocolate-Lava-Cake-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="2a.jpg" alt="Cheesecake">
+            <div>
+                <h3>Cheesecake</h3>
+                <p>Creamy cheesecake with a graham cracker crust, topped with fresh berries.</p>
+                <p>Price: $7.00</p>
+            </div>
+            <input type="number" id="Cheesecake-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="3a.jpg" alt="Tiramisu">
+            <div>
+                <h3>Tiramisu</h3>
+                <p>Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                <p>Price: $9.00</p>
+            </div>
+            <input type="number" id="Tiramisu-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="4a.jpg" alt="Apple Pie">
+            <div>
+                <h3>Apple Pie</h3>
+                <p>Homemade apple pie with a flaky crust, served with a scoop of vanilla ice cream.</p>
+                <p>Price: $6.00</p>
+            </div>
+            <input type="number" id="Apple-Pie-qty" min="0" value="0">
+        </div>
+    </section>
+    <section id="Vegetables">
+        <h2>Vegetables</h2>
+        <div class="menu-item">
+            <img src="1q.jpg" alt="Veggie Stir-Fry">
+            <div>
+                <h3>Veggie Stir-Fry</h3>
+                <p>A colorful mix of fresh vegetables stir-fried with a savory sauce.</p>
+                <p>Price: $12.00</p>
+            </div>
+            <input type="number" id="Veggie-Stir-Fry-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="2q.jpg" alt="Grilled Asparagus">
+            <div>
+                <h3>Grilled Asparagus</h3>
+                <p>Char-grilled asparagus spears drizzled with olive oil and lemon.</p>
+                <p>Price: $10.00</p>
+            </div>
+            <input type="number" id="Grilled-Asparagus-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="3q.jpg" alt="Caesar Salad">
+            <div>
+                <h3>Caesar Salad</h3>
+                <p>Crisp romaine lettuce tossed with Caesar dressing, croutons, and Parmesan cheese.</p>
+                <p>Price: $9.00</p>
+            </div>
+            <input type="number" id="Caesar-Salad-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="4q.jpg" alt="Roasted Brussels Sprouts">
+            <div>
+                <h3>Roasted Brussels Sprouts</h3>
+                <p>Brussels sprouts roasted to perfection, served with balsamic glaze.</p>
+                <p>Price: $11.00</p>
+            </div>
+            <input type="number" id="Roasted-Brussels-Sprouts-qty" min="0" value="0">
+        </div>
+    </section>
+    <section id="AddOns">
+        <h2>Add Ons</h2>
+        <div class="menu-item">
+            <img src="1w.jpg" alt="Garlic Bread">
+            <div>
+                <h3>Garlic Bread</h3>
+                <p>Toasted garlic bread slices, perfect as a side to any dish.</p>
+                <p>Price: $5.00</p>
+            </div>
+            <input type="number" id="Garlic-Bread-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="2w.jpg" alt="French Fries">
+            <div>
+                <h3>French Fries</h3>
+                <p>Crispy golden French fries served with ketchup.</p>
+                <p>Price: $4.00</p>
+            </div>
+            <input type="number" id="French-Fries-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="3w.jpg" alt="Side Salad">
+            <div>
+                <h3>Side Salad</h3>
+                <p>Fresh garden salad with a variety of vegetables and your choice of dressing.</p>
+                <p>Price: $6.00</p>
+            </div>
+            <input type="number" id="Side-Salad-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="4w.jpg" alt="Mashed Potatoes">
+            <div>
+                <h3>Mashed Potatoes</h3>
+                <p>Creamy mashed potatoes made with butter and cream.</p>
+                <p>Price: $5.00</p>
+            </div>
+            <input type="number" id="Mashed-Potatoes-qty" min="0" value="0">
+        </div>
+    </section>
+    <button onclick="calculateTotal()">PAY AT THE COUNTER</button>
+		 <div class="button-container">
+        <a href="HOMEPAGE.html">Home</a>
+    </div>
+    <footer>
+        &copy; 2024 Kain Po! All rights reserved.
+    </footer>
+
+    <script>
+        const items = [
+            { id: 'Grilled-Salmon-qty', name: 'Grilled Salmon', price: 18.00 },
+            { id: 'Steak-and-Fries-qty', name: 'Steak and Fries', price: 22.00 },
+            { id: 'Chicken-Alfredo-qty', name: 'Chicken Alfredo', price: 16.00 },
+            { id: 'Vegetarian-Pizza-qty', name: 'Vegetarian Pizza', price: 14.00 },
+            { id: 'Chocolate-Lava-Cake-qty', name: 'Chocolate Lava Cake', price: 8.00 },
+            { id: 'Cheesecake-qty', name: 'Cheesecake', price: 7.00 },
+            { id: 'Tiramisu-qty', name: 'Tiramisu', price: 9.00 },
+            { id: 'Apple-Pie-qty', name: 'Apple Pie', price: 6.00 },
+            { id: 'Veggie-Stir-Fry-qty', name: 'Veggie Stir-Fry', price: 12.00 },
+            { id: 'Grilled-Asparagus-qty', name: 'Grilled Asparagus', price: 10.00 },
+            { id: 'Caesar-Salad-qty', name: 'Caesar Salad', price: 9.00 },
+            { id: 'Roasted-Brussels-Sprouts-qty', name: 'Roasted Brussels Sprouts', price: 11.00 },
+            { id: 'Garlic-Bread-qty', name: 'Garlic Bread', price: 5.00 },
+            { id: 'French-Fries-qty', name: 'French Fries', price: 4.00 },
+            { id: 'Side-Salad-qty', name: 'Side Salad', price: 6.00 },
+            { id: 'Mashed-Potatoes-qty', name: 'Mashed Potatoes', price: 5.00 }
+        ];
+
+        function calculateTotal() {
+            let total = 0;
+            let orderDetails = 'You ordered:\n';
+            items.forEach(item => {
+                const quantity = document.getElementById(item.id).value;
+                if (quantity > 0) {
+                    total += item.price * quantity;
+                    orderDetails += `${item.name}: ${quantity} x $${item.price.toFixed(2)}\n`;
+                }
+            });
+            orderDetails += `Total Price: $${total.toFixed(2)}`;
+            alert(orderDetails);
+        }
+    </script>
+</body>
+</html>

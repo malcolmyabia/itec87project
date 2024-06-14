@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicolm</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: pink;
+            color: #fff;
+            padding: 12px 0;
+			padding-left: 1%;
+        }
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            float: center;
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: black;
+            color: pink;
+        }
+        section {
+            padding: 20px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: black;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+			
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background: pink;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .menu-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+        .menu-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .menu-item input {
+            width: 50px;
+            padding: 5px;
+            margin-left: auto;
+        }
+        button {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            padding: 15px;
+            font-size: 1em;
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #green;
+        }
+		.discount {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 1em;
+        }
+		 .button-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="logo" width= "180px" >
+    </header>
+    <nav>
+        <a href="#Jeans">Jeans</a>
+		<a href="#T-shirt">T-shirt</a>
+        <a href="#Perfume">Perfume</a>
+        <a href="#Sando">Sando</a>
+        <a href="#Toys">Toys</a>
+    </nav>
+    <section id="Jeans">
+        <h2>Jeans</h2>
+        <div class="menu-item">
+            <img src="jean1.jpg">
+            <div>
+                <h3>Flare Pants</h3>
+                <p> close-fitted from waist to knee before expanding around the calf.</p>
+                <p>Price: 1500.00</p>
+            </div>
+            <input type="number" id="Flare-Pants-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="jean2.jpg">
+            <div>
+                <h3>Baggy Pants</h3>
+                <p> They're great to have in your wardrobe rotation year-round, including during the warmer months.</p>
+                <p>Price: $1800.00</p>
+            </div>
+            <input type="number" id="Baggy-Pants-qty" min="0" value="0">
+        </div>
+		  <div class="menu-item">
+            <img src="jean3.jpg">
+            <div>
+                <h3>Ripped Pants</h3>
+                <p> It’s a pair of jeans which features a frayed, worn look, and has distinct ripped spaces.</p>
+                <p>Price: 2000.00</p>
+            </div>
+            <input type="number" id="Ripped-Pants-qty" min="0" value="0">
+        </div>
+		  </div>
+		  <div class="menu-item">
+            <img src="jean4.jpg">
+            <div>
+                <h3>Normal Pants</h3>
+                <p> classic style and cheap.</p>
+                <p>Price: 800.00</p>
+            </div>
+            <input type="number" id="Normal-Pants-qty" min="0" value="0">
+        </div>
+		
+		<section id="T-shirt">
+        <h2>T-shirt</h2>
+        <div class="menu-item">
+            <img src="T1.jpg">
+            <div>
+                <h3>Gray T-shirt</h3>
+                <p>It is a pretty simple answer really… high-quality cotton t-shirts are soft and comfortable to wear</p>
+                <p>Price: 500.00</p>
+            </div>
+            <input type="number" id="Gray-T-Shirt-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="T2.jpg">
+            <div>
+                <h3>Orange T-shirt</h3>
+                <p>It is a pretty simple answer really… high-quality cotton t-shirts are soft and comfortable to wear</p>
+                <p>Price: 500.00</p>
+            </div>
+            <input type="number" id="Orange-T-Shirt-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="T3.jpg">
+            <div>
+                <h3>Green T-shirt</h3>
+                <p>It is a pretty simple answer really… high-quality cotton t-shirts are soft and comfortable to wear</p>
+                <p>Price: 500.00</p>
+            </div>
+            <input type="number" id="Green-T-Shirt-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="T4.jpg">
+            <div>
+                <h3>Black T-shirt</h3>
+                <p>It is a pretty simple answer really… high-quality cotton t-shirts are soft and comfortable to wear.</p>
+                <p>Price: 650.00</p>
+            </div>
+            <input type="number" id="Black-T-Shirt-qty" min="0" value="0">
+        </div>
+    </section>
+    <section id="Perfume">
+        <h2>Perfume</h2>
+        <div class="menu-item">
+            <img src="PER1.jpg" >
+            <div>
+                <h3>Sweet Perfume</h3>
+                <p> Sweet perfumes offer a sugary and indulgent aroma, with notes like vanilla, caramel, or marshmallow.</p>
+                <p>Price: 550</p>
+            </div>
+            <input type="number" id="Sweet-Perfume-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="PER2.jpg" >
+            <div>
+                <h3>Seductive Perfume</h3>
+                <p>It is renowned for its sensual and seductive qualities. Its intimate, skin-like aroma evokes feelings of warmth, closeness, and attraction.</p>
+                <p>Price: 850.00</p>
+            </div>
+            <input type="number" id="Seductive-Perfume-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="PER3.jpg" >
+            <div>
+                <h3>Baby Perfume</h3>
+                <p> Baby cologne is a delightful and refreshing fragrance that’s perfect for all ages.</p>
+                <p>Price: 350.00</p>
+            </div>
+            <input type="number" id="Baby-Perfume-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="PER4.jpg" >
+            <div>
+                <h3>Signature Perfume</h3>
+                <p>It’s a fragrance that defines you. It represents your personality, character, and style. </p>
+                <p>Price: 1,000.00</p>
+            </div>
+            <input type="number" id="Signature-Perfume-qty" min="0" value="0">
+        </div>
+    </section>
+    <section id="Sando">
+        <h2>Sando</h2>
+    <div class="menu-item">
+            <img src="SAN1.jpg" >
+            <div>
+                <h3>Red Sando</h3>
+                <p>Free-size tank top with stretchable fabric, suitable for small to large sizes.</p>
+                <p>Price: 400.00</p>
+            </div>
+            <input type="number" id="Red-Sando-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="SAN2.jpg" >
+            <div>
+                <h3>Black Sando</h3>
+                <p>Free-size tank top with stretchable fabric, suitable for small to large sizes.</p>
+                <p>Price:400.00</p>
+            </div>
+            <input type="number" id="Black-Sando-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="SAN3.jpg" >
+            <div>
+                <h3>Mixed Color Sando</h3>
+                <p>Free-size tank top with stretchable fabric, suitable for small to large sizes.</p>
+                <p>Price:500.00</p>
+            </div>
+            <input type="number" id="Mixed-Color-Sando-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="SAN4.jpg" alt="Roasted Brussels Sprouts">
+            <div>
+                <h3>White Sando</h3>
+                <p>Free-size tank top with stretchable fabric, suitable for small to large sizes.</p>
+                <p>Price:400.00</p>
+            </div>
+            <input type="number" id="White-Sando-qty" min="0" value="0">
+        </div>
+    </section>
+    <section id="Toys">
+        <h2>Toys</h2>
+        <div class="menu-item">
+            <img src="Y1.jpg" >
+            <div>
+                <h3>Stress Balls</h3>
+                <p>Stress balls are pliable objects designed for squeezing and manipulation. </p>
+                <p>Price:300.00</p>
+            </div>
+            <input type="number" id="Stress-Balls-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="Y2.jpg" >
+            <div>
+                <h3>Airplane Toy</h3>
+                <p>Toy airplanes can be a fantastic way to engage your child’s imagination and enhance their motor skills. </p>
+                <p>Price: 350.00</p>
+            </div>
+            <input type="number" id="Airplane-Toy-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="Y3.jpg" >
+            <div>
+                <h3>Car Toy</h3>
+                <p>Miniature nonfunctioning replica of a car, esp one that children play with.</p>
+                <p>Price:400.00</p>
+            </div>
+            <input type="number" id="Car-Toy-qty" min="0" value="0">
+        </div>
+        <div class="menu-item">
+            <img src="Y4.jpg" >
+            <div>
+                <h3>Doll</h3>
+                <p>A doll is a child's toy that looks like a baby or other human being. </p>
+                <p>Price: 350.00</p>
+            </div>
+            <input type="number" id="Doll-qty" min="0" value="0">
+        </div>
+    </section>
+
+<select id="discount" class="discount">
+        <option value="0">No Discount</option>
+        <option value="10">10% Discount</option>
+        <option value="20">20% Discount</option>
+        <option value="30">30% Discount</option>
+    </select>
+    <button onclick="calculateTotal()">Calculate Total</button>
+	 <div class="button-container">
+        <a href="HOMEPAGE.html">Home</a>
+    </div>
+    <script>
+        function calculateTotal() {
+            const items = [
+            { id: 'Flare-Pants-qty', name: 'Flare Pants', price:  1500.00 },
+            { id: 'Baggy-Pants-qty', name: 'Baggy Pants', price: 1800.00 },
+            { id: 'Ripped-Pants-qty', name: 'Ripped Pants', price: 2000.00 },
+            { id: 'Normal-Pants-qty', name: 'Normal Pants', price: 800.00 },
+            { id: 'Gray-T-Shirt-qty', name: 'Gray T-Shirt', price: 500.00 },
+            { id: 'Orange-T-Shirt-qty', name: 'Orange T-Shirt', price: 500.00 },
+            { id: 'Green-T-Shirt-qty', name: 'Green T-Shirt', price: 500.00 },
+            { id: 'Black-T-Shirt-qty', name: 'Black T-Shirt', price: 650.00 },
+            { id: 'Sweet-Perfume-qty', name: 'Sweet Perfume', price: 550.00 },
+            { id: 'Seductive-Perfume-qty', name: 'Seductive Perfume', price: 850.00 },
+            { id: 'Baby-Perfume-qty', name: 'Baby Perfume', price: 350.00 },
+            { id: 'Signature-Perfume-qty', name: 'Signature Perfume', price: 1000.00 },
+            { id: 'Red-Sando-qty', name: 'Red Sando', price: 400.00 },
+            { id: 'Black-Sando-qty', name: 'Black Sando', price: 400.00 },
+            { id: 'Mixed-Color-Sando-qty', name: 'Mixed Color Sando', price: 500.00 },
+            { id: 'White-Sando-qty', name: 'White Sando', price: 400.00 },
+	        { id: 'Stress-Balls-qty', name: 'Stress Balls', price: 300.00 },
+            { id: 'Airplane-Toy-qty', name: 'Airplane Toy', price: 350.00 },
+            { id: 'Car-Toy-qty', name: 'Car Toy', price: 400.00 },
+            { id: 'Doll-qty', name: 'Doll', price: 350.00 },
+            ];
+            
+            let total = 0;
+            items.forEach(item => {
+                const quantity = parseInt(document.getElementById(item.id).value, 10);
+                if (!isNaN(quantity) && quantity > 0) {
+                    total += quantity * item.price;
+                }
+            });
+            
+            const discountElement = document.getElementById('discount');
+            const discount = parseInt(discountElement.value, 10);
+            const discountAmount = total * (discount / 100);
+            total -= discountAmount;
+
+            alert(`Total price with ${discount}% discount is: ${total.toFixed(2)}`);
+        }
+    </script>
+</body>
+</html>
